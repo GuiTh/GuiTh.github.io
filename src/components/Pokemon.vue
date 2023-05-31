@@ -10,7 +10,7 @@
             <div class="media">
             <div class="media-content">
                 <p class="title is-4">{{id}} - {{name | upper}}</p>
-                <p class="subtitle is-6"> {{ pokemon.type }} </p>
+                <p class="subtitle is-size-7"> tipo:{{ pokemon.type }}  | altura:{{ height }} | peso:{{ weight }} </p>
             </div>
             </div>
             <div class="content">
@@ -34,6 +34,8 @@ export default {
             this.pokemon.back = res.data.sprites.back_default;
             this.currentImg = this.pokemon.front;
             this.id = res.data.id;
+            this.height = res.data.height;
+            this.weight = res.data.weight
         })
     },
     data(){
@@ -44,7 +46,9 @@ export default {
                 type: '',
                 front: '',
                 back: '',
-                id: ''
+                id: '',
+                height: '',
+                weight: ''
             }
         }
     },
@@ -76,6 +80,6 @@ export default {
 <style>
  #pokemon{
     margin-top: 3%;
-    width: 100%
+    width: 100%;
  }
 </style>
