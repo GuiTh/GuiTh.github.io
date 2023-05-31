@@ -75,6 +75,7 @@ export default {
 
 <style>
  #pokemon{
-     margin-top: 2%;
+    margin-top: 3%;
+    width: 100%
  }
 </style>

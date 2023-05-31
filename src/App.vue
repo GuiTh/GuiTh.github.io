@@ -5,9 +5,11 @@
       <h4 class="is-size-4">Pokedex</h4>
       <input type="text" placeholder="Buscar pokemon pelo nome" v-model="busca" class="input is-rounded">
       <button class="button is-fullwidth is-success" id="buscaBtn" @click="buscar">Buscar</button>
+      <div class="pokemons">
       <div v-for="(poke,index) in filteredPokemons" :key="poke.url">
         <Pokemon :name="poke.name" :url="poke.url" :num="index+1"/>
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -69,5 +71,10 @@ export default {
 
 #buscaBtn{
   margin-top: 2%;
+}
+.pokemons{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2rem;
 }
 </style>
